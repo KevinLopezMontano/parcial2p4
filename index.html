@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ejemplo Tipo Parcial 2</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="view/css/style.css">
+
+ 
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center dark-background">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">Segundo Parcial</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>Kevin Lopez Montaño</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <h1 class="sitename">Kevin Lopez Montaño</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Inicio</a></li>
+            <li><a href="#about">Sistema</a></li>
+
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Empresa: Drapps</h2>
+        <p>Bienvenido al sistema de Gestión del Cliente</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-12" data-aos="fade-right" data-aos-delay="200">
+            <div class="content">
+              <h2>Sistema para administrar empleados en la empresa Drapps</h2>
+
+              <button type="button" class="btn btn-primary" onclick="crearEmpleado();">Agregar Empleado (Con un div Oculto)</button>
+
+              
+
+              <div class="container" id="divAgregarEmpleado">
+                 <h4>Agregar Empleados: Drapps</h2>
+
+                   <form id="formEmpleado">
+    <div class="mb-3 mt-3">
+      <label for="ccF">CC:</label>
+      <input type="number" class="form-control" id="cc" placeholder="CC Empleado" name="ccPHP">
+    </div>
+    <div class="mb-3">
+      <label for="nya">Nombres y Apellidos:</label>
+      <input type="text" class="form-control" id="nombresyApellidos" placeholder="Nombres y Apellidos" name="nombresyApellidosPHP">
+    </div>
+
+    <div class="mb-3">
+      <label for="dir">Dirección:</label>
+      <input type="text" class="form-control" id="direccion" placeholder="Dirección" name="direccionPHP">
+    </div>
+
+    <div class="mb-3">
+      <label for="emailf">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Email" name="emailPHP">
+    </div>
+
+     <div class="mb-3">
+      <label for="telefonof">Teléfono:</label>
+      <input type="number" class="form-control" id="telefono" placeholder="Teléfono" name="telefonoPHP">
+    </div>
+
+    <div class="mb-3">
+      <label for="sueldof">Sueldo:</label>
+      <input type="number" class="form-control" id="sueldoBase" placeholder="Sueldo" name="sueldoBasePHP">
+    </div>
+
+    <div class="mb-3">
+      <label for="tipoEf">Tipo Empleado:</label>
+    <select name="tipoEmpleadoPHP" id="tipoEmpleado">
+      
+      <option value="Fijo">Fijo</option>
+      <option value="Contrato">Contrato</option>
+    </select>
+     </div>
+
+      <div class="mb-3">
+      <label for="tipoBf">Tipo Bonificación:</label>
+    <select name="tipoBonificacionPHP" id="tipoBonificacion">
+      
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+      
+    
+
+    </select>
+     </div>
+
+
+   
+    <button type="submit" class="btn btn-primary" onclick="agregarEmpleado();">Agregar Empleado</button>
+  </form>
+  <div class="mt-3">
+    <div id="mensajes" class="alert alert-info d-none"></div>
+    <div class="mb-3">
+      
+      <button type="button" class="btn btn-sm btn-warning ms-2" onclick="borrarEmpleados();">Reset LocalStorage</button>
+    </div>
+  </div>
+
+  
+                
+              </div>
+
+
+              <table class="table table-hover" id="tablaEmpleados">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>CC</th>
+        <th>Nombres y Apellidos</th>
+        <th>Dirección</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>Sueldo Base</th>
+        <th>Tipo de Empleado</th>
+        <th>Tipo de bonificación</th>
+        <th>Saldo Total</th>
+        
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td>1.</td>
+        <td>10768776555</td>
+        <td>Doe</td>
+        <td>Aguachica</td>
+         <td>doe@gmail.com</td>
+          <td>3153801813</td>
+           <td>100000</td>
+            <td>Fijo</td>
+             <td>C</td>
+             <td>200000</td>
+              
+      </tr>
+
+      <tr>
+          <td>2.</td>
+        <td>10768776545</td>
+        <td>Calletana López Baleta</td>
+        <td>Aguachica</td>
+         <td>ky@gmail.com</td>
+          <td>3153801813</td>
+           <td>100000</td>
+            <td>Fijo</td>
+             <td>A</td>
+             <td>300000</td>
+              
+      </tr>
+      
+      <tr>
+          <td>3.</td>
+        <td>10768776500</td>
+        <td>José Rodríguez</td>
+        <td>Aguachica</td>
+         <td>jose@gmail.com</td>
+          <td>3153801813</td>
+           <td>500000</td>
+            <td>Fijo</td>
+             <td>C</td>
+             <td>600000</td>
+              
+      </tr>
+      
+      
+    </tbody>
+    
+  </table>
+  <strong>Total Nómina Mensual:</strong> <span id="totalNomina">$0</span>
+
+
+            </div>
+          </div>
+
+       
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Skills Section -->
+
+
+    <!-- Stats Section -->
+
+    <!-- Services Section -->
+
+    <!-- Testimonials Section -->
+
+
+    <!-- Portfolio Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Grupo # 8</h2>
+        <p>parcial # 2</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-card">
+              <div class="member-image-wrapper">
+                <img src="assets/img/person/person-f-1.webp" class="img-fluid" alt="Team Member">
+              </div>
+              <div class="member-content">
+                <h4 class="member-name">Kevin Lopez</h4>
+                <span class="member-role">Estudiante</span>
+                <p class="member-bio">Ingeniería de Sistemas</p>
+                <div class="member-socials">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-card">
+              <div class="member-image-wrapper">
+                <img src="assets/img/person/person-m-2.webp" class="img-fluid" alt="Team Member">
+              </div>
+              <div class="member-content">
+                <h4 class="member-name">David Lee</h4>
+                <span class="member-role">Product Manager</span>
+                <p class="member-bio">Voluptas qui enim omnis est atque. Enim sunt quo et amet corporis et. Autem eaque optio.</p>
+                <div class="member-socials">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member-card">
+              <div class="member-image-wrapper">
+                <img src="assets/img/person/person-f-3.webp" class="img-fluid" alt="Team Member">
+              </div>
+              <div class="member-content">
+                <h4 class="member-name">Laura Rodriguez</h4>
+                <span class="member-role">Marketing Director</span>
+                <p class="member-bio">Qui ut autem quo error molestiae. Voluptatem quia eligendi voluptatibus beatae vitae et quis. Quis voluptatem.</p>
+                <div class="member-socials">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="member-card">
+              <div class="member-image-wrapper">
+                <img src="assets/img/person/person-m-4.webp" class="img-fluid" alt="Team Member">
+              </div>
+              <div class="member-content">
+                <h4 class="member-name">Michael Brown</h4>
+                <span class="member-role">Lead Engineer</span>
+                <p class="member-bio">Rerum et sint voluptatem enim aut. Quisquam et alias ut qui voluptatum. Autem voluptas exercitationem.</p>
+                <div class="member-socials">
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-github"></i></a>
+                  <a href="#"><i class="bi bi-stack-overflow"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+    <!-- Pricing Section -->
+
+
+    <!-- Faq Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contactos</h2>
+        <p>Necesitas Ayuda?? Contáctanos</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-stretch">
+          <div class="col-lg-7 order-lg-1 order-2" data-aos="fade-right" data-aos-delay="200">
+            <div class="contact-form-container">
+              <div class="form-intro">
+                <h2>Let's Start a Conversation</h2>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+              </div>
+
+              <form action="forms/contact.php" method="post" class="php-email-form contact-form">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-field">
+                      <input type="text" name="name" class="form-input" id="userName" placeholder="Your Name" required="">
+                      <label for="userName" class="field-label">Name</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-field">
+                      <input type="email" class="form-input" name="email" id="userEmail" placeholder="Your Email" required="">
+                      <label for="userEmail" class="field-label">Email</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-field">
+                      <input type="tel" class="form-input" name="phone" id="userPhone" placeholder="Your Phone">
+                      <label for="userPhone" class="field-label">Phone</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-field">
+                      <input type="text" class="form-input" name="subject" id="messageSubject" placeholder="Subject" required="">
+                      <label for="messageSubject" class="field-label">Subject</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-field message-field">
+                  <textarea class="form-input message-input" name="message" id="userMessage" rows="5" placeholder="Tell us about your project" required=""></textarea>
+                  <label for="userMessage" class="field-label">Message</label>
+                </div>
+
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+
+                <button type="submit" class="send-button">
+                  Send Message
+                  <span class="button-arrow">→</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-5 order-lg-2 order-1" data-aos="fade-left" data-aos-delay="300">
+            <div class="contact-sidebar">
+              <div class="contact-header">
+                <h3>Get in Touch</h3>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.</p>
+              </div>
+
+              <div class="contact-methods">
+                <div class="contact-method" data-aos="fade-in" data-aos-delay="350">
+                  <div class="contact-icon">
+                    <i class="bi bi-geo-alt"></i>
+                  </div>
+                  <div class="contact-details">
+                    <span class="method-label">Address</span>
+                    <p>892 Park Avenue, Manhattan<br>New York, NY 10075</p>
+                  </div>
+                </div>
+
+                <div class="contact-method" data-aos="fade-in" data-aos-delay="400">
+                  <div class="contact-icon">
+                    <i class="bi bi-envelope"></i>
+                  </div>
+                  <div class="contact-details">
+                    <span class="method-label">Email</span>
+                    <p>hello@businessdemo.com</p>
+                  </div>
+                </div>
+
+                <div class="contact-method" data-aos="fade-in" data-aos-delay="450">
+                  <div class="contact-icon">
+                    <i class="bi bi-telephone"></i>
+                  </div>
+                  <div class="contact-details">
+                    <span class="method-label">Phone</span>
+                    <p>+1 (555) 789-2468</p>
+                  </div>
+                </div>
+
+                <div class="contact-method" data-aos="fade-in" data-aos-delay="500">
+                  <div class="contact-icon">
+                    <i class="bi bi-clock"></i>
+                  </div>
+                  <div class="contact-details">
+                    <span class="method-label">Hours</span>
+                    <p>Monday - Friday: 9AM - 6PM<br>Saturday: 10AM - 4PM</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="connect-section" data-aos="fade-up" data-aos-delay="550">
+                <span class="connect-label">Connect with us</span>
+                <div class="social-links">
+                  <a href="#" class="social-link">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                  <a href="#" class="social-link">
+                    <i class="bi bi-twitter-x"></i>
+                  </a>
+                  <a href="#" class="social-link">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                  <a href="#" class="social-link">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-12">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Drapps</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Página utilizada para academia</strong> <span>All Rights Reserved 
+
+       <a href="https://bootstrapmade.com/">Bootstrapmade</a>  
+
+      </span></p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+
+  <!-- Vendor JS Controlador -->
+
+<script src="model/Empleado.js"></script>
+  <script src="controller/main.js"></script>
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
